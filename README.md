@@ -1,16 +1,9 @@
-# scInfer
+# msInfer
 
 
-### Large-scale proteomic inference at single-cell resolution by scInfer
+### Inferring paired large-scale single-cell proteomic for RNA by msInfer
 
-Capturing large-scale transcriptomic and proteomic data from individual cells is crucial for studying the complex functions and characteristics of multicellular organisms. The currently available multiomics single-cell biotechnologies, while capable of simultaneously evaluating the transcriptome and proteome, are limited to a small number of protein types identified by specific antibodies. Single-cell mass spectrometry can achieve large-scale proteins measurements but cannot simultaneously obtain transcriptomic information. Therefore, computational method is the only solution for pairing large-scale protein data with large amount of existing single-cell transcriptomic data. However, there are currently no methods available to infer specific information by unpaired multiomics data. Here, we propose a method called scInfer to infer large-scale proteomic data for each cell of single-cell RNA-seq data based on proteomic data from single cell mass spectrometry. This method includes a self-supervised contrastive learning module to align unpaired transcriptomic and proteomic data, and an unsupervised weight generation module to achieve inference. We demonstrate that scInfer can be used to infer proteomics data comparable to real measurements, enabling its effective application in differential protein identification, cell clustering, and other downstream tasks. Additionally, scInfer outperforms existing methods in integrating multiomics data, while facilitating cell subtype annotation, exploring drug mechanisms, and dissecting comprehensive cell-level information across tumour states.
-
-Here you can watch our paper presentation video and our code demonstration video:
-
-- [A concise overview of the research and key contributions.](https://www.youtube.com/watch?v=fgoBAAjSaQE)
-
-- [A step-by-step demonstration of the algorithm’s functionality and application.](https://www.youtube.com/watch?v=xB3hYK5tTTE)
-
+Obtaining high-throughput, large-scale, and paired transcriptomic and proteomic data at the single-cell level is crucial for understanding the complex functions and phenotypic characteristics of multicellular organisms. However, current biomolecular measurement technologies are limited by detect only a small panel of functional proteins or by low cellular throughput, which hinders comprehensive analysis of cell function. Therefore, there is an urgent need of computational approaches to bridge the gap between the high-throughput nature of single-cell RNA sequencing (scRNA-seq) and the large-scale protein profiling offered by single-cell proteomics. We describe msInfer to leverage single-cell proteomic data as a reference to infer large-scale protein expression profiles for each cell in scRNA-seq data. msInfer includes a self-supervised contrastive learning module that aligns unpaired transcriptomic and proteomic data, and an unsupervised weight generation module that performs the inference. Through systematic evaluation from multiple dimensions, msInfer demonstrates high concordance between inferred and experimentally measured protein expression. msInfer enables effective downstream tasks such as differential protein identification and cell clustering. Moreover, it outperforms existing methods in multi-omics integration, significantly enhancing capabilities in cell subtype annotation, drug mechanism exploration, and the construction of single-cell multi-omics atlas.
 
 
 <p align="center">
