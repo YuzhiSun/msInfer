@@ -1,10 +1,9 @@
 # msInfer
 
 
-### Inferring paired large-scale single-cell proteomic for RNA by msInfer
+### Large-scale proteome inference from unpaired single-cell transcriptomic and proteomic data by msInfer
 
-Obtaining high-throughput, large-scale, and paired transcriptomic and proteomic data at the single-cell level is crucial for understanding the complex functions and phenotypic characteristics of multicellular organisms. However, current biomolecular measurement technologies are limited by detect only a small panel of functional proteins or by low cellular throughput, which hinders comprehensive analysis of cell function. Therefore, there is an urgent need of computational approaches to bridge the gap between the high-throughput nature of single-cell RNA sequencing (scRNA-seq) and the large-scale protein profiling offered by single-cell proteomics. We describe msInfer to leverage single-cell proteomic data as a reference to infer large-scale protein expression profiles for each cell in scRNA-seq data. msInfer includes a self-supervised contrastive learning module that aligns unpaired transcriptomic and proteomic data, and an unsupervised weight generation module that performs the inference. Through systematic evaluation from multiple dimensions, msInfer demonstrates high concordance between inferred and experimentally measured protein expression. msInfer enables effective downstream tasks such as differential protein identification and cell clustering. Moreover, it outperforms existing methods in multi-omics integration, significantly enhancing capabilities in cell subtype annotation, drug mechanism exploration, and the construction of single-cell multi-omics atlas.
-
+Comprehensive characterization of cellular states requires simultaneous measurements of transcriptomes and proteomes at single-cell resolution. However, current technologies either measure only limited protein panels or quantify thousands of proteins at extremely low throughput. As a result, obtaining large-scale paired transcriptomic–proteomic measurements at single-cell resolution remains challenging. Here we present msInfer, a computational framework that integrates unpaired scRNA-seq and single-cell mass spectrometry (scMS) proteomics data to enable large-scale proteome inference for individual transcriptomic cells. To address the weak correlation between mRNA and protein abundance, msInfer replaces traditional anchor-based integration with a cell type–guided contrastive learning strategy for cross-omics alignment and employs an unsupervised weight generation module to infer protein abundances. Across extensive computational benchmarking and experimental validation, msInfer shows strong concordance between inferred and experimentally measured protein expression. msInfer facilitates the exploration of drug-induced molecular changes, supports the construction of single-cell multi-omics atlas and improves cell subtype annotation. Overall, msInfer provides a scalable and robust framework for bridging transcriptomic and proteomic measurements and enables comprehensive multi-omics characterization of cellular states.
 
 <p align="center">
   <img width="80%" src="image/Workflow_github.png">
@@ -15,20 +14,20 @@ Obtaining high-throughput, large-scale, and paired transcriptomic and proteomic 
 ## Environment
 
 #### Option1 [recommend]
-We provide more convenient online running examples that can be executed directly through Colab, without the need for local environment setup. Click the Colab icon to directly enter the online runtime environment to run the scInfer demo. 
+We provide more convenient online running examples that can be executed directly through Colab, without the need for local environment setup. Click the Colab icon to directly enter the online runtime environment to run the msInfer demo. 
 <a href="https://colab.research.google.com/github/YuzhiSun/scInfer_colab/blob/main/Unpaired_benchmark_breast.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 #### Option2
 If you want to configure the environment locally, you can follow the configuration methods below.
 
-The running environment of scInfer can be installed from enviornment.yml
+The running environment of msInfer can be installed from enviornment.yml
 ```
 > conda env create --name env_name -f environment.yml  
 ```
 
 ## Turorial
 
-The following notebooks are provided to show how to run scInfer model
+The following notebooks are provided to show how to run msInfer model
 
 1. [BreastTaskEmbedding](BreastTaskEmbedding.ipynb) gives a detailed description of how to obtain embedding features for transcriptomics and proteomics.
 2. [BreastTaskInfer](BreastTaskInfer.ipynb) gives a detailed description of how to infer proteomics data for transcriptomics.
@@ -45,6 +44,6 @@ We can successfully run it on a single RTX 2080Ti GPU.
 
 ## Questions
 
-If you have any suggestions/ideas for scInfer, please don't hesitate to reach out to us. You can reach us by email(yuzhi@stu.hit.edu.cn).
+If you have any suggestions/ideas for msInfer, please don't hesitate to reach out to us. You can reach us by email(yuzhi@stu.hit.edu.cn).
 
 
