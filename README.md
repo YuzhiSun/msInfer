@@ -6,7 +6,7 @@
 Comprehensive characterization of cellular states requires simultaneous measurements of transcriptomes and proteomes at single-cell resolution. However, current technologies either measure only limited protein panels or quantify thousands of proteins at extremely low throughput. As a result, obtaining large-scale paired transcriptomic–proteomic measurements at single-cell resolution remains challenging. Here we present msInfer, a computational framework that integrates unpaired scRNA-seq and single-cell mass spectrometry (scMS) proteomics data to enable large-scale proteome inference for individual transcriptomic cells. To address the weak correlation between mRNA and protein abundance, msInfer replaces traditional anchor-based integration with a cell type–guided contrastive learning strategy for cross-omics alignment and employs an unsupervised weight generation module to infer protein abundances. Across extensive computational benchmarking and experimental validation, msInfer shows strong concordance between inferred and experimentally measured protein expression. msInfer facilitates the exploration of drug-induced molecular changes, supports the construction of single-cell multi-omics atlas and improves cell subtype annotation. Overall, msInfer provides a scalable and robust framework for bridging transcriptomic and proteomic measurements and enables comprehensive multi-omics characterization of cellular states.
 
 <p align="center">
-  <img width="80%" src="image/Workflow_github.png">
+  <img width="80%" src="image/overview.png">
 </p>
 
 
